@@ -23,6 +23,8 @@ This dataset contains information on 63,872 participants who underwent testing f
 | **Age, years, median [IQR]** | 41.0 [33.0 - 52.0] | 43.0 [34.0 - 54.0]        | 41.0 [33.0 - 52.0]         |
 | **Health Professional, n (%)** | 30,653 (47.99) | 3,686 (40.48)              | 26,967 (49.24)             |
 
+It is important to note that more than 80 percent of the patients tested negative for Covid, which draws our attention to the need to balance the data
+
 #### Symptom Prevalence
 
 | Symptom                  | Total (n = 63,872) | Positive Test (n = 9,105) | Negative Test (n = 54,767) |
@@ -38,12 +40,44 @@ This dataset contains information on 63,872 participants who underwent testing f
 | **Shortness of Breath, n (%)** | 1,136 (1.78)  | 312 (3.43)                | 824 (1.5)                  |
 | **NA Symptom, n (%)**    | 12,212 (19.12)     | 1,022 (11.22)              | 11,190 (20.43)             |
 
-This summary highlights the differences in symptom prevalence between participants who tested positive and those who tested negative for COVID-19.
+This summary highlights the differences in symptom prevalence between participants who tested positive and those who tested negative for COVID-19. As an example, 56.85 percent of individuals who tested positive for Covid were diagnosed with loss of smell, while only 3.43 percent had shortness of breath
 
 ### Logistic regression adjusted for age and gender, for each symptom (remove the confounding effects of age and gender)
 
-![Odds ratios](Assets\Association_symptoms_COVID-19.png)
+![Odds_ratios](Assets\Association_symptoms_COVID-19.png)
+
+Thus, the odds of being diagnosed with Covid-19 is 1.11 higher given baseline Loss of Smell diagnosis compared to no baseline Loss of Smell.
 
 ## Models
 
+![AUC_ROC_curve](Assets\roc_models.png)
+
+Taking the area over the ROC curve as a metric, Xgboost showed the best results compared to Logistic Regression and Random Forest. However, having a model with high performance but poor interpretability, especially in the health sector, is not a good option, which is exactly why we need to resort to interpretable methods!
+
 ## Interpretability methods
+
+
+| Summary plot - SHAP - Logistic Regression | Besswarm plot - LIME - Logistic Regression |
+|------------------------------------------|------------------------------------------|
+| ![Summary_plot_SHAP_Logistic_Regression](Assets/shap_LR.png) | ![Besswarm_plot_LIME_Logistic_Regression](Assets/Lime_LR.png) |
+
+| Summary plot - SHAP - Random Forest | Besswarm plot - LIME - Random Forest |
+|------------------------------------------|------------------------------------------|
+| ![Summary_plot_SHAP_RF](Assets\shap_RF.png) | ![Besswarm_plot_LIME_RF](Assets\Lime_RF.png) |
+
+| Summary plot - SHAP - XGboost | Besswarm plot - LIME - XGboost |
+|------------------------------------------|------------------------------------------|
+| ![Summary_plot_SHAP_xgb](Assets\shap_xgb.png) | ![Besswarm_plot_LIME_xgb](Assets\Lime_xgb.png) |
+
+- It can be seen that the symptom relating to Loss of Smell (LossSmell) was the most important in the interpretation of all the models used.
+
+- Moreover, Shortness of Breath has a negative impact when the value is high in the LIME graphs (Random Forest and XGboost) and shows variability in the SHAP graph.
+
+- Sore Throat and Fever have mixed impacts, indicating that their importance may vary depending on other symptoms present.
+
+## References
+
+[1] Leila F Dantas and et al. App-based symptom tracking to optimize sars-cov-2 testing strategy
+using machine learning. PloS one, 16(3):e0248920, 2021.
+
+[2] Christoph Molnar. Interpretable Machine Learning. Github, 2 edition, 2022.
