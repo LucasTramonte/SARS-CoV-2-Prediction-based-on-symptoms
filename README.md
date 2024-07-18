@@ -44,13 +44,13 @@ This summary highlights the differences in symptom prevalence between participan
 
 ### Logistic regression adjusted for age and gender, for each symptom (remove the confounding effects of age and gender)
 
-![Odds_ratios](Assets\Association_symptoms_COVID-19.png)
+![Odds_ratios](Assets/Association_symptoms_COVID-19.png)
 
 Thus, the odds of being diagnosed with Covid-19 is 1.11 higher given baseline Loss of Smell diagnosis compared to no baseline Loss of Smell.
 
 ## Models
 
-![AUC_ROC_curve](Assets\roc_models.png)
+![AUC_ROC_curve](Assets/roc_models.png)
 
 Taking the area over the ROC curve as a metric, Xgboost showed the best results compared to Logistic Regression and Random Forest. However, having a model with high performance but poor interpretability, especially in the health sector, is not a good option, which is exactly why we need to resort to interpretable methods!
 
@@ -63,11 +63,11 @@ Taking the area over the ROC curve as a metric, Xgboost showed the best results 
 
 | Summary plot - SHAP - Random Forest | Besswarm plot - LIME - Random Forest |
 |------------------------------------------|------------------------------------------|
-| ![Summary_plot_SHAP_RF](Assets\shap_RF.png) | ![Besswarm_plot_LIME_RF](Assets\Lime_RF.png) |
+| ![Summary_plot_SHAP_RF](Assets/shap_RF.png) | ![Besswarm_plot_LIME_RF](Assets/Lime_RF.png) |
 
 | Summary plot - SHAP - XGboost | Besswarm plot - LIME - XGboost |
 |------------------------------------------|------------------------------------------|
-| ![Summary_plot_SHAP_xgb](Assets\shap_xgb.png) | ![Besswarm_plot_LIME_xgb](Assets\Lime_xgb.png) |
+| ![Summary_plot_SHAP_xgb](Assets/shap_xgb.png) | ![Besswarm_plot_LIME_xgb](Assets/Lime_xgb.png) |
 
 - It can be seen that the symptom relating to Loss of Smell (LossSmell) was the most important in the interpretation of all the models used.
 
