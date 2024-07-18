@@ -60,7 +60,6 @@ def calculate_coefficients_and_intervals(model, X_train_RL, symptom_columns, alp
     return odds_ratio_ML, lowerCI, upperCI
 
 
-
 def plot_odds_ratios(odds_ratios, symptom_columns, lowerCI, upperCI):
     # Create tuples and sort
     tuple_od = sorted(zip(odds_ratios, symptom_columns))
@@ -117,7 +116,7 @@ def metrics_ML(model, X_train, X_test, y_train, y_test):
     disp.plot()
     plt.show()
     
-    return X_train, X_test, y_train, y_test, y_pred
+    return model, X_train, X_test, y_train, y_test, y_pred
 
 
 def SHAP_LINEAR(model, X_train, X_test, symptom_columns):
@@ -136,18 +135,16 @@ def SHAP_LINEAR(model, X_train, X_test, symptom_columns):
     
     return Imp_shap
 
-def SHAP(model, X_test, symptom_columns):
+def SHAP(model, X_test, features):
     print("---------------SHAP--------------------")
     
     explainer = shap.TreeExplainer(model)
 
     shap_values = explainer.shap_values(X_test)
-
-    shap.summary_plot(shap_values[1], X_test, feature_names = symptom_columns)
+    shap.summary_plot(shap_values[:,:,1], X_test, feature_names = features)
     plt.figure()
-
     print()
-    Imp_shap = np.mean(np.abs(shap_values[1]), axis=0)
+    Imp_shap = np.mean(np.abs(shap_values[:,:,1]), axis=0)
     print('Feature importance : ', Imp_shap)
     
     return Imp_shap
