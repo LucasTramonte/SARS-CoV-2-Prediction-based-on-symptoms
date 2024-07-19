@@ -46,7 +46,7 @@ This summary highlights the differences in symptom prevalence between participan
 
 ![Odds_ratios](Assets/Association_symptoms_COVID-19.png)
 
-Thus, the odds of being diagnosed with Covid-19 is 1.11 higher given baseline Loss of Smell diagnosis compared to no baseline Loss of Smell.
+Thus, the odds of being diagnosed with Covid-19 is 3.981 higher given baseline Loss of Smell diagnosis compared to no baseline Loss of Smell!
 
 ## Models
 
@@ -69,11 +69,11 @@ Taking the area over the ROC curve as a metric, Xgboost showed the best results 
 |------------------------------------------|------------------------------------------|
 | ![Summary_plot_SHAP_xgb](Assets/shap_xgb.png) | ![Besswarm_plot_LIME_xgb](Assets/Lime_xgb.png) |
 
-- It can be seen that the symptom relating to Loss of Smell (LossSmell) was the most important in the interpretation of all the models used.
+- It can be seen that the symptom relating to Loss of Smell was the most important in the interpretation of all the models used.
 
 - Moreover, Shortness of Breath has a negative impact when the value is high in the LIME graphs (Random Forest and XGboost) and shows variability in the SHAP graph.
 
-- Sore Throat and Fever have mixed impacts, indicating that their importance may vary depending on other symptoms present.
+- When analyzing the symptom “Sore Throat”, it is also evident that the interpretability results converge. Although this attribute is relevant for both SHAP and LIME methods (ranking high in the ordering), the color distribution along the x-axis in all the SHAP and LIME results indicates that this symptom reduces the probability of patients testing positive for COVID-19. This finding is consistent with the the odds ratio for this symptom (approximately 0.67), meaning there is about a 33% reduction in the chance of a patient testing positive for COVID-19 when this symptom is present. 
 
 ## References
 
