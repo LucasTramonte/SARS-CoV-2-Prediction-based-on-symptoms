@@ -1,14 +1,18 @@
 # SARS-COV-2-Prediction-based-on-symptoms
 This repository focuses on predicting COVID-19 from symptom data, emphasizing interpretability by employing SHAP and LIME methods. Explore our investigation into how these local interpretability techniques can enhance understanding in medical diagnosis predictions for the SARS-CoV-2 pathogen
 
+The project was funded by [CNPq](https://www.gov.br/cnpq/pt-br) (National Council for Scientific and Technological Development), supported by [BIOS](https://bi0s.unicamp.br/) (Brazilian Institute of Data Science), and carried out at the Data Analysis and Decision Support Laboratory ([LAD2](https://www.lad2.org/)), FCA/Unicamp.
+
+The project was accepted for poster presentation at the Meeting on Codes, Lattices, and Information ([EnCoRi](https://ime.unicamp.br/encori/)):
+
+![Encori](Assets/Poster_EncoRI.jpg)
+
 ## Contents
 - [Exploratory Data Analysis(EDA)](#Exploratory_Data_Analysis(EDA))
 - [Models](#models)
 - [Interpretability methods](#Interpretability_methods)
 
 ## Exploratory Data Analysis (EDA)
-
-This dataset contains information on 63,872 participants who underwent testing for COVID-19, with detailed demographics and symptoms recorded for both positive and negative cases.
 
 ### COVID-19 Dataset Summary
 
