@@ -1,5 +1,5 @@
 # SARS-COV-2-Prediction-based-on-symptoms
-This repository focuses on predicting COVID-19 from symptom data, emphasizing interpretability by employing SHAP and LIME methods. Explore our investigation into how these local interpretability techniques can enhance understanding in medical diagnosis predictions for the SARS-CoV-2 pathogen
+This repository focuses on predicting COVID-19 from symptom data, emphasizing interpretability by employing SHAP and LIME methods. Explore the investigation into how these local interpretability techniques can enhance understanding in medical diagnosis predictions for the SARS-CoV-2 pathogen
 
 The project was funded by [CNPq](https://www.gov.br/cnpq/pt-br) (National Council for Scientific and Technological Development), supported by [BIOS](https://bi0s.unicamp.br/) (Brazilian Institute of Data Science), and carried out at the Data Analysis and Decision Support Laboratory ([LAD2](https://www.lad2.org/)), FCA/Unicamp.
 
@@ -85,3 +85,15 @@ Taking the area over the ROC curve as a metric, Xgboost showed the best results 
 using machine learning. PloS one, 16(3):e0248920, 2021.
 
 [2] Christoph Molnar. Interpretable Machine Learning. Github, 2 edition, 2022.
+
+[3] Thomas Davenport and Ravi Kalakota. The potential for artificial intelligence in healthcare. Future Hospital Journal, 6:94–98, 06 2019.
+
+[3] Bert Heinrichs and Simon Eickhoff. Your evidence? machine learning algorithms for medical diagnosis and prediction. Human Brain Mapping, 41, 12 2019.
+
+[4] M.F. Kristiansen and et al. Epidemiology and clinical course of first wave coronavirus disease cases, faroe islands. Emerging Infectious Diseases, 27(3):749–758, Mar 2021. PMID: 33513332; PMCID: PMC7920693.
+
+[5] Tyler J Loftus, Patrick J Tighe, Tezcan Ozrazgat-Baslanti, J Parker Davis, Mathew M Ruppert, and Yulong. Ren. Ideal algorithms in healthcare: Explainable, dynamic, precise, autonomous, fair, and reproducible. PLOS Digital Health, 1(1):e0000006, 2022.
+
+[6] Marco Tulio Ribeiro, Sameer Singh, and Carlos Guestrin. “why should i trust you?”: Explaining the predictions of any classifier. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD ’16, page 1135–1144, New York, NY, USA, 2016. Association for Computing Machinery.
+
+[7] Chandan Singh, Keyan Nasseri, Yan Shuo Tan, Tiffany Tang, and Bin Yu. imodels: a python package for fitting interpretable models, 5 2022.
